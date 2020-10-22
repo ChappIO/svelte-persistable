@@ -2,7 +2,9 @@
 .idea/
 
 ### OUTPUT ###
-dist/
+*.js
+*.js.map
+*.d.ts
 
 ### NODE ###
 node_modules/
