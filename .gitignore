@@ -5,6 +5,8 @@
 *.js
 *.js.map
 *.d.ts
+*.xml
+coverage/
 
 ### NODE ###
 node_modules/
