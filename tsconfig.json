@@ -2,9 +2,9 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
     "sourceMap": true,
-    "declaration": true,
     "types": [
-      "jest"
+      "jest",
+      "svelte"
     ]
   },
   "include": [
