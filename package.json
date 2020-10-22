@@ -9,7 +9,8 @@
     "build": "tsc",
     "validate": "svelte-check",
     "prepublishOnly": "yarn build",
-    "test": "jest"
+    "test": "jest",
+    "clean": "rimraf src/*.d.ts src/*.js*"
   },
   "files": [
     "src"
