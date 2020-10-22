@@ -57,11 +57,11 @@
       "svelte",
       "js"
     ],
-    "testResultsProcessor": "jest-sonar-reporter",
     "reporters": [
       "default",
       "jest-junit"
     ],
+    "testResultsProcessor": "jest-sonar-reporter",
     "coverageReporters": [
       "lcov"
     ],
