@@ -8,7 +8,8 @@
   "scripts": {
     "build": "tsc",
     "validate": "svelte-check",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "test": "jest"
   },
   "files": [
     "src"
@@ -17,13 +18,47 @@
     "svelte": "^3.29.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/svelte": "^3.0.0",
     "@tsconfig/svelte": "^1.0.10",
+    "@types/jest": "^26.0.15",
+    "babel-jest": "^26.6.0",
+    "jest": "^26.6.0",
+    "rollup": "^2.32.1",
+    "rollup-plugin-svelte": "^6.1.0",
     "svelte": "^3.29.0",
     "svelte-check": "^1.0.60",
+    "svelte-jester": "^1.1.5",
+    "svelte-preprocess": "^4.5.1",
+    "ts-jest": "^26.4.1",
     "tslib": "^2.0.3",
     "typescript": "^4.0.3"
   },
   "keywords": [
     "svelte"
-  ]
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.svelte$": [
+        "svelte-jester",
+        {
+          "preprocess": true
+        }
+      ],
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.ts$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "svelte",
+      "js"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
+  }
 }
